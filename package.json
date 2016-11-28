@@ -5,7 +5,8 @@
   "author": "hou <5466315@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js && json-server --watch server.json",
+    "dev": "node build/dev-server.js",
+    "server": "json-server --watch server.json",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },

@@ -1,35 +1,30 @@
 <template>
   <header class="header">
-    <div @click="backEvent">
-      <span></span>
+    <div class="left">
+      个人中心
     </div>
-    {{title}}
+    笑毛毛
+    <div class="right">
+      分享
+    </div>
   </header>
 </template>
-<style lang='sass'>
+<style lang='sass' scoped>
   header
     text-align: center
-    height: 50px
-    line-height: 51px
-    background-color: #388ad7
+    height: 35px
+    line-height: 36px
+    background-color: #f79100
     color: #fff
-    font-size: 18px
+    font-size: 14px
     position: relative
-    div
-      width: 45px
-      height: 100%
+    .left,.right
       position: absolute
+      top: 0
+    .left
       left: 0
-    span
-      display: block
-      width: 12px
-      height: 12px
-      border-bottom: 3px solid #fff
-      border-left: 3px solid #fff
-      transform: rotate(45deg)
-      margin: 0 auto
-      margin-top: 17px
-      -webkit-transform: rotate(45deg)
+    .right
+      right: 0
 </style>
 <script>
   import {router} from '../router.js'
