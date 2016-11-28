@@ -2,21 +2,20 @@
   <div class="indexPage">
     <HeaderCompoent></HeaderCompoent>
     <router-view></router-view>
-    <Footer></Footer>
+    <Indexfooter></Indexfooter>
   </div>
 </template>
 <style lang="sass">
   .indexPage
-
+    background-color: #e1e1e1
 </style>
 <script>
   import HeaderCompoent from '../components/HeaderCompoent.vue'
-  import Footer from '../components/Footer.vue'
+  import Indexfooter from '../components/Footer.vue'
 
   export default{
-    name: 'index',
     data () {
-      return {title: ''}
+      return {}
     },
     methods: {
     },
@@ -24,7 +23,7 @@
     },
     components: {
       HeaderCompoent,
-      Footer
+      Indexfooter
     },
     mounted () {
     }

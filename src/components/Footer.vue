@@ -1,14 +1,14 @@
 <template>
   <footer class="footer">
-    <router-link to="duanzi" class="active">
+    <div v-bind:class="{ active: 'duanzi' == type }" @click="toIndextype('duanzi')">
       段子
-    </router-link>
-    <router-link to="gif">
+    </div>
+    <div v-bind:class="{ active: 'gif' == type }"  @click="toIndextype('gif')">
       动图
-    </router-link>
-    <router-link to="heighlights">
+    </div>
+    <div v-bind:class="{ active: 'heighlights' == type }" @click="toIndextype('heighlights')">
       亮点
-    </router-link>
+    </div>
   </footer>
 </template>
 <style lang='sass' scoped>
@@ -24,7 +24,7 @@
     background-color: aquamarine
     line-height: 31px
     background-color: #f79100
-    a
+    div
       flex-grow: 1
       color: #764000
       &.active
@@ -33,17 +33,16 @@
 </style>
 <script>
   import {router} from '../router.js'
+  import {footerData} from '../data.js'
   export default{
     data () {
-      return {
-        'msg': 'sssss'
-      }
+      return footerData
     },
     methods: {
-      backEvent () {
-        router.go(-1)
+      toIndextype (e) {
+        this.type = e
+        router.push(e)
       }
     }
   }
-
 </script>
